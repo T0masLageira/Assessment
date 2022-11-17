@@ -13,20 +13,19 @@ public class Users {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name="Name")
+    @Column(name="Name", nullable = false)
     private String name;
 
-    @Column(name="surName")
+    @Column(name="surName", nullable = false)
     private String surName;
     
-    @Column(name="email")
+    @Column(name="phoneNumber", nullable = false)
     private String phoneNumber;
 
-    @Column(name="email")
+    @Column(name="email", nullable = false)
     private String email;
 
-	public Users(Long id, String name, String surName, String phoneNumber, String email) {
-		this.id = id;
+	public Users(String name, String surName, String phoneNumber, String email) {
 		this.name = name;
 		this.surName = surName;
 		this.phoneNumber = phoneNumber;
@@ -72,4 +71,6 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	} 
+	
+	
 }

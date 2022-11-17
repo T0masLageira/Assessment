@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import backendassessment.assessment.Entities.Users;
 
 @Repository
-public interface UsersRepository extends JpaRepository<Users, Long> {
+public interface UsersRepository extends JpaRepository <Users, Long> {
 
 }

@@ -10,7 +10,7 @@ import javax.xml.ws.ServiceMode;
 public class UsersConverter implements DtoMapper<Users, UsersDTO> {
     @Override
     public UsersDTO ModelToDto(Users model) {
-        return new UsersDTO(model.getName(),model.getSurName(),model.getPhoneNumber(),model.getEmail());
+        return new UsersDTO(model.getId(),model.getName(),model.getSurName(),model.getPhoneNumber(),model.getEmail());
     }
 
     @Override

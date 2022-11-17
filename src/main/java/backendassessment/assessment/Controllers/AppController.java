@@ -27,5 +27,11 @@ public class AppController {
 		return userService.createNewUser(newUSer);
 	}
 
+	@DeleteMapping(path="delete-user/{id}")
+	public String deleteUser(@PathVariable Long id){
+		return userService.deleteUSer(id);
 
+}
+
+	
 }

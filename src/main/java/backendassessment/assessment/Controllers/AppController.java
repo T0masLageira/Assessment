@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import backendassessment.assessment.Entities.Users;
 import backendassessment.assessment.Services.UsersService;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path = "/api/v1")
 public class AppController {
@@ -22,7 +22,7 @@ public class AppController {
 	}
 
 	@PostMapping(path="/add-new-user")
-	public UsersDTO addNewUSer(
+	public Users addNewUSer(
 			@RequestBody Users newUSer){
 		return userService.createNewUser(newUSer);
 	}
